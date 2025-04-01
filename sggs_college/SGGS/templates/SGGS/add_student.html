@@ -13,9 +13,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Changed from height to min-height */
             margin: 0;
+            padding: 20px; /* Adds spacing for better layout */
+            overflow-y: auto; /* Enables scrolling if needed */
         }
+
         h1 {
             color: #4CAF50;
             text-align: center;

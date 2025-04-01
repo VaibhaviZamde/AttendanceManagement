@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+    <title>SGGS Attendance Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Welcome to SGGS College</h1>
+<body class="bg-light">
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">SGGS Attendance</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'attendance_list' %}">View Attendance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'add_attendance' %}">Add Attendance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'student_list' %}">View Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'add_student' %}">Add Student</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'subject_list' %}">View Subjects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'add_subject' %}">Add Subject</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Welcome to SGGS Attendance Management System</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Attendance</h5>
+                        <a href="{% url 'attendance_list' %}" class="btn btn-primary">View</a>
+                        <a href="{% url 'add_attendance' %}" class="btn btn-success">Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Students</h5>
+                        <a href="{% url 'student_list' %}" class="btn btn-primary">View</a>
+                        <a href="{% url 'add_student' %}" class="btn btn-success">Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Subjects</h5>
+                        <a href="{% url 'subject_list' %}" class="btn btn-primary">View</a>
+                        <a href="{% url 'add_subject' %}" class="btn btn-success">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
